@@ -162,7 +162,7 @@ Make sure you have the latest [Xcode](https://developer.apple.com/xcode/) instal
 The `AppDelegate.m` file can only have one method for `openUrl`. If you're also using `RCTLinkingManager` to handle deep links, you should handle both results in your `openUrl` method.
 
 ```
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
   BOOL handledFB = [[FBSDKApplicationDelegate sharedInstance] application:application
@@ -187,7 +187,7 @@ The `AppDelegate.m` file can only have one method for `openUrl`. If you're also 
 
   - Make sure that the Facebook SDK frameworks are installed in `~/Documents/FacebookSDK`.
   - Make sure that `FBSDK[Core, Login, Share]Kit.framework` show up in the **Link Binary with Libraries** section of your build target's **Build Phases**.
-  - Make sure that `~/Documents/FacebookSDK` is in the **Framework Search Path** of your build target's **Build Settings**.
+  - Make sure that `$(HOME)/Documents/FacebookSDK` is in the **Framework Search Path** of your build target's **Build Settings**.
 
 3. I get build errors like `Warning: Native component for "RCTFBLikeView" does not exist`:
 
